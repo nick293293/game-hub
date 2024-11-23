@@ -1,6 +1,7 @@
+//import { Button, ButtonGroup } from "@chakra-ui/react";
+
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-import Assignment from "./Assignment";
 import GameGrid from "./components/GameGrid";
 
 function App() {
@@ -8,16 +9,15 @@ function App() {
     <Grid
       templateAreas={{
         base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`, // 1024px or wider is considered a large device
+        lg: `"nav nav" "aside main"`, // 1024px
       }}
     >
       <GridItem area="nav">
-        <NavBar></NavBar>
+        <NavBar />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside">Aside</GridItem>
       </Show>
-
       <GridItem area="main">
         <GameGrid />
       </GridItem>
